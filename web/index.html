@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c3243">
+  <title>BIEHLER JEAN</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    :root {
+      --ink: #1c3243;
+      --teal: #2c7a7b;
+      --gold: #c58f2a;
+      --mist: #f4f7f2;
+      --line: #d9e3da;
+      --paper: #ffffff;
+      --text: #18242d;
+      --muted: #607078;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--mist);
+      line-height: 1.5;
+    }
+
+    header {
+      background: var(--ink);
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 18px 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+    }
+
+    .nav-pill {
+      color: white;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-weight: 800;
+    }
+
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 46px 20px 34px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 8vw, 76px);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    .button.primary {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    .button.secondary {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+
+    .hero-media {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: #203a4b;
+    }
+
+    .hero-media img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1024 / 500;
+      object-fit: cover;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 20px 52px;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+      margin: 18px 0;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .section-title p {
+      margin: 0;
+      max-width: 520px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .workflow {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: var(--ink);
+      color: white;
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .panel p {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .badge {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: rgba(44, 122, 123, 0.14);
+      color: var(--teal);
+      font-weight: 900;
+    }
+
+    .tag {
+      color: var(--ink);
+      background: rgba(197, 143, 42, 0.18);
+      border-radius: 999px;
+      padding: 6px 9px;
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 20px 36px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 820px) {
+      .hero,
+      .workflow {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-title {
+        display: block;
+      }
+    }
+
+    @media (max-width: 520px) {
+      nav {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .row {
+        grid-template-columns: auto 1fr;
+      }
+
+      .tag {
+        grid-column: 2;
+        width: fit-content;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Primary">
+      <div class="brand">
+        <img src="icons/Icon-192.png" alt="">
+        <span>BIEHLER JEAN</span>
+      </div>
+      <a class="nav-pill" href="mailto:support@biehlerjean.com">Contact</a>
+    </nav>
+    <section class="hero">
+      <div>
+        <h1>BIEHLER JEAN</h1>
+        <p>Mobile operations workspace for payroll reports, appointment booking, compliance reporting, and procurement requests.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#workflow">View Workflow</a>
+          <a class="button secondary" href="mailto:support@biehlerjean.com">Support</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="featured.png" alt="BIEHLER JEAN operations workspace preview">
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section>
+      <div class="section-title">
+        <h2>Daily business tasks, organized locally.</h2>
+        <p>The Android app keeps operational records on the phone and avoids accounts, cloud sync, analytics, advertising, and device permissions.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <strong>Payroll reports</strong>
+          <p>Track report requests, owners, variance notes, and review status.</p>
+        </article>
+        <article class="card">
+          <strong>Appointments</strong>
+          <p>Book vendor, staff, and office appointments with a due date and owner.</p>
+        </article>
+        <article class="card">
+          <strong>Compliance</strong>
+          <p>Keep registers, filing tasks, and evidence checks visible.</p>
+        </article>
+        <article class="card">
+          <strong>Procurement</strong>
+          <p>Capture purchase requests, expected values, and follow-up notes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="workflow">
+      <div class="panel">
+        <h2>Built for phone-first operations.</h2>
+        <p>Open the dashboard, add a request, update status, and review deadlines without leaving the app.</p>
+      </div>
+      <div class="list">
+        <div class="row">
+          <div class="badge">1</div>
+          <div>
+            <strong>Create a request</strong><br>
+            <span>Choose payroll, appointment, compliance, or procurement.</span>
+          </div>
+          <span class="tag">Local</span>
+        </div>
+        <div class="row">
+          <div class="badge">2</div>
+          <div>
+            <strong>Assign ownership</strong><br>
+            <span>Add the responsible desk, value, notes, and target date.</span>
+          </div>
+          <span class="tag">Fast</span>
+        </div>
+        <div class="row">
+          <div class="badge">3</div>
+          <div>
+            <strong>Review reports</strong><br>
+            <span>Use status and deadline views to keep work moving.</span>
+          </div>
+          <span class="tag">Clear</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    BIEHLER JEAN stores app records on the device. Support: support@biehlerjean.com
+  </footer>
+</body>
+</html>

@@ -1,0 +1,6 @@
+using $gpc-app-builder  create this app
+app title: BIEHLER JEAN
+app idea: An operations-focused app offering payroll reports, appointment booking, compliance reporting, and procurement requests to streamline daily business tasks.
+company name: BIEHLER JEAN
+email address: [email to be provided later]
+the two icon and featured graphics contained in docs folder
