@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "applications": {
+    "com.taziggg100.biehler_jean": {
+      "title": "BIEHLER JEAN",
+      "short_description": "Manage payroll reports, bookings, compliance items, and procurement requests...",
+      "full_description": "BIEHLER JEAN gives small operations teams a focused place to track day-to-day business work on an Android phone. Create payroll report tasks, appointment bookings, compliance items, and procurement requests with owners, values, due dates, and status updates.\n\nThe app is built for quick daily review. Use the dashboard for open work, the request queue for filtering by operation type, reports for status and deadlines, and settings for local record controls.\n\nAll records stay on the device. The app does not require an account, cloud sync, analytics, advertising, or device permissions.",
+      "source_screenshots": [
+        "docs/screens/1.png",
+        "docs/screens/2.png",
+        "docs/screens/3.png"
+      ],
+      "generated_from": "existing repository listing metadata and README",
+      "generated_at": "2026-10-02T21:27:36.805439+00:00"
+    }
+  }
+}
