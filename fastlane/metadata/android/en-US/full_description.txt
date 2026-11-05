@@ -1,0 +1,5 @@
+BIEHLER JEAN gives small operations teams a focused place to track day-to-day business work on an Android phone. Create payroll report tasks, appointment bookings, compliance items, and procurement requests with owners, values, due dates, and status updates.
+
+The app is built for quick daily review. Use the dashboard for open work, the request queue for filtering by operation type, reports for status and deadlines, and settings for local record controls.
+
+All records stay on the device. The app does not require an account, cloud sync, analytics, advertising, or device permissions.

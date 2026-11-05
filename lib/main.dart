@@ -275,7 +275,7 @@ List<OperationRecord> sampleRecords({bool seedOnly = false}) {
     OperationRecord(
       id: 'payroll-may-close',
       kind: OperationKind.payroll,
-      title: 'May payroll variance report',
+      title: 'BIEHLER JEAN',
       owner: 'Payroll desk',
       dueDate: now.add(const Duration(days: 2)),
       status: RecordStatus.review,
